@@ -261,6 +261,7 @@ poetry.toml
 
 #env file
 .env/
+*.iml
 # LSP config files
 pyrightconfig.json
 
