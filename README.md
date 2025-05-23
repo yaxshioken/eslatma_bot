@@ -1,10 +1,13 @@
 # Eslatma Bot
 
-**Eslatma Bot** — Bu Telegram bot, foydalanuvchilarga eslatmalar yaratish va ularni kerakli vaqtda eslatib turish imkonini beradi.
+**Eslatma Bot** — Bu Telegram bot, foydalanuvchilarga eslatmalar yaratish va ularni kerakli vaqtda eslatib turish
+imkonini beradi.
 
 ## Loyihaning maqsadi
 
-Eslatma bot foydalanuvchilarga muhim eslatmalarni yaratish va ularni kerakli vaqtlarda xabar yuborish orqali eslatib turishni ta'minlaydi. Bu bot Telegram orqali ishlaydi va foydalanuvchilar o'z eslatmalarini bot orqali yuborishlari mumkin.
+Eslatma bot foydalanuvchilarga muhim eslatmalarni yaratish va ularni kerakli vaqtlarda xabar yuborish orqali eslatib
+turishni ta'minlaydi. Bu bot Telegram orqali ishlaydi va foydalanuvchilar o'z eslatmalarini bot orqali yuborishlari
+mumkin.
 
 ## O'rnatish
 
@@ -14,7 +17,8 @@ Loyihani o'zingizning kompyuteringizga klonlash uchun quyidagi buyruqni ishlatin
 
 2. Virtual muhitni yaratish va faollashtirish
 
-Loyihada ishlash uchun virtual muhitni yaratish va uni faollashtirish kerak. Quyidagi buyruqlarni bajarish orqali virtual muhitni yaratish mumkin:
+Loyihada ishlash uchun virtual muhitni yaratish va uni faollashtirish kerak. Quyidagi buyruqlarni bajarish orqali
+virtual muhitni yaratish mumkin:
 
 Windows:
 
@@ -44,7 +48,6 @@ Botni ishga tushurish uchun quyidagi buyruqni bajarishingiz kerak:
 
     python bot.py
 
-
 Agar biron bir muammo yuzaga kelsa yoki savollaringiz bo'lsa, quyidagi manzillarga murojaat qiling:
 
     Email: yaxshioken@gmail.com
@@ -52,5 +55,6 @@ Agar biron bir muammo yuzaga kelsa yoki savollaringiz bo'lsa, quyidagi manzillar
     Telegram: @Aziz_555
 
     GitHub Issues: https://github.com/yaxshioken/eslatma_bot/issues
+
 ```bash
 git clone https://github.com/yaxshioken/eslatma_bot.git 
