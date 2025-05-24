@@ -1,5 +1,12 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
-mijozlar = ReplyKeyboardMarkup(keyboard=[[KeyboardButton(text="✨ Yangi Mijozni eslatmaga belgilash ✨"),
-                                          KeyboardButton(text="🔄 Davrni yangilash 🔄")]], resize_keyboard=True,
-                               one_time_keyboard=True)
+mijozlar_keyboard = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            KeyboardButton(text="🆕 Yangi mijozni eslatmaga belgilash"),
+            KeyboardButton(text="🔄 Davrni yangilash"),
+            KeyboardButton(text="📞 Telefon raqam bo‘yicha qidirish")
+        ]
+    ],
+    resize_keyboard=True
+)
