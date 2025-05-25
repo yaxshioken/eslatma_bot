@@ -7,12 +7,19 @@ class ClientState(StatesGroup):
     yaratilgan_sanasi = State()
     tugaydigan_sanasi = State()
     telefon_raqami = State()
-    masul_xodim=State()
+    masul_xodim = State()
     finish = State()
+
+
 class UpdateDateState(StatesGroup):
-    phone_number=State()
-    boshlanish_date=State()
-    tugash_date=State()
+    phone_number = State()
+    boshlanish_date = State()
+    tugash_date = State()
+
 
 class PhoneState(StatesGroup):
-    raqami=State()
+    raqami = State()
+
+
+class AdminStates(StatesGroup):
+    waiting_for_admin_id = State()
