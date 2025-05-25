@@ -407,7 +407,7 @@ async def main() -> None:
     scheduler.add_job(
         scheduled_task,
         'cron',
-        hour='9,18',
+        hour='9,15',
         minute=5,
         args=(bot,)
     )
