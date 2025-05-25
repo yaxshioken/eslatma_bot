@@ -292,7 +292,7 @@ async def succes_end(message: Message, state: FSMContext):
         await message.answer("❗️Iltimos, mavjud bo‘lgan va to‘g‘ri ID kiriting!")
 
 
-@dp.message(F.text == "Barcha aktiv mijozlarni ko'rish 😊")
+@dp.message(F.text == "Barcha  mijozlarni ko'rish 😊")
 async def get_all_clients(message: Message):
     data = db.get_clients()
     for mijoz_info in data:
@@ -368,6 +368,26 @@ async def command_start_handler(message: Message) -> None:
             db.insert_user(username, telegram_id, first_name)
         await message.answer(welcome_text, parse_mode="HTML")
 
+@dp.message(F.text=="🤗 Qo‘llab-quvvatlashdagi mijozlarni ko‘rish")
+async def active_clients(message:Message):
+    data = db.get_clients()
+    for mijoz_info in data:
+        message_text = (
+            f"{html.bold('📝 Mijoz ma\'lumotlari ro‘yxati.')}\n\n"
+            f"{html.italic('Ismi:')} {html.bold(mijoz_info[1])}\n"
+            f"{html.italic('Kompaniyasi:')} {html.bold(mijoz_info[2])}\n"
+            f"{html.italic('Ishga tushgan vaqti:')} {html.bold(mijoz_info[3])}\n"
+            f"{html.italic('Xizmat tugash vaqti:')} {html.bold(mijoz_info[4])}\n"
+            f"{html.italic('Telefon raqami:')} {html.bold(mijoz_info[6])}\n"
+            f"{html.italic('Ma\'sul shaxs:')} {html.bold(mijoz_info[7])}\n"
+        )
+        await message.reply(
+                    chat_id=message.from_user.id,
+                    text=message_text,
+                    parse_mode="HTML",
+                    reply_markup=mijozlar_keyboard
+        )
+
 
 async def scheduled_task(bot):
     data = db.get_clients()
@@ -389,7 +409,7 @@ async def scheduled_task(bot):
                     chat_id=chat_id,
                     text=message_text,
                     parse_mode="HTML",
-                    reply_markup=ReplyKeyboardRemove()
+                    reply_markup=mijozlar_keyboard
                 )
             except Exception as e:
                 print(f"Xabar yuborishda xatolik {chat_id} uchun: {e}")

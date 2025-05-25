@@ -161,6 +161,17 @@ class DB:
         data = cursor.fetchall()
         return data
 
+    def get_active_clients(self):
+        cursor = self.db.cursor()
+        get_all_clients_sql = """
+                              SELECT *
+                              FROM clients
+                              WHERE end_date >= %s; \
+                              """
+        today = datetime.date.today()
+        cursor.execute(get_all_clients_sql, (today,))
+        data = cursor.fetchall()
+        return data
     def get_all_admin(self):
         cursor = self.db.cursor()
         get_all_admins = "SELECT telegram_id FROM users WHERE roles = 'admin';"

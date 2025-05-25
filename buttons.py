@@ -8,10 +8,13 @@ mijozlar_keyboard = ReplyKeyboardMarkup(
         ],
         [
             KeyboardButton(text="📞 Telefon raqam bo‘yicha qidirish"),
-            KeyboardButton(text="Barcha aktiv mijozlarni ko'rish 😊")
+            KeyboardButton(text="Barcha  mijozlarni ko'rish 😊")
         ],
         [
             KeyboardButton(text="🚀 Yangi admin yaratamiz — jamoani rivojlantiraylik! 🤝")
+        ],
+        [
+            KeyboardButton(text="🤗 Qo‘llab-quvvatlashdagi mijozlarni ko‘rish")
         ]
     ],
     resize_keyboard=True
